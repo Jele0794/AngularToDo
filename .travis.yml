@@ -1,7 +1,7 @@
 language: node_js
-deploy: 
+deploy:
   provider: heroku
   api_key:
-    secure: 40d79a7f-0a0e-4d83-b3ae-bc0c760c26c5
-  app: 
+    secure: VW0b2wzLmsfHcwbLSEyHv+HbiyloUjORUtUv/XvTekHa4TVoWkhqaywXGl+EZdjJ83DlSPqo908ti/r3AAqcIEXa6x07vY5xPW6MRHI0ThuQY5IP1oyxPoxA/067g+d+3K2jbxrp772JDVvAOm4foI/EhJplSFqRkbVHB7+6cxyckZliedHJNVe+fSjc9jvJf+PQCHFnHXE8ci2lBOr8EQIQBBCqmvQqwoiu39JillIKYIX/0Qp/I7HqNyPi9cDNqqmAWwO3Zn3eX5VT32O6+RuX+QXfjKNGWBODaZShP0VGMtr5ygtBJ7/DUWYwAOebvMMNKAdnZY7PAniF/0QIr+72NhNIZE5a5wGkoWduKL3/ERUd3MoU4ZHASMetRIKpXcPvPDhUKRITpyBVryd/dQxKXNyYQ3sqwcxKwHQzcbNGf39aWi2LV+PJow+DXitxKcEAYx8+hJEvr7u3gmDOv0WeyxZJjHNy12CwN+HqicBdCG15TgTN400keqROJ1NJTbIAdDJ8ZqvC1kOTnQJJ8PDNLKSpZVNCfY5HvxxlEhUnWQUzhsWkss136icMi343tWD3jHdb+yfmFmuQclibMFgE1xNJRn4OET5ioQmHNEZsJUOlp7/+3i2HBJFo5aqQH/V5+cN1l/4LSpcUmIdCrs4ggJaapqFGGBDixYw/UBk=
+  app:
     master: vanilla-todo-qa
