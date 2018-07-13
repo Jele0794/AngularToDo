@@ -54,7 +54,7 @@ function onError(error) {
     ? 'Pipe ' + error.port
     : 'Port ' + error.port;
 
-  // handle specific listen errors with friendly messages
+  // handle specific listen errors with friendly messages.
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
@@ -62,6 +62,10 @@ function onError(error) {
       break;
     case 'EADDRINUSE':
       console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    case 'ELIFECYCLE':
+      console.info('Server killed by user.');
       process.exit(1);
       break;
     default:
