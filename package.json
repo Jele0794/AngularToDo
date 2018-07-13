@@ -1,8 +1,8 @@
 {
-  "name": "vanilla-todo",
+  "name": "angular-todo",
   "private": true,
   "version": "0.0.1",
-  "description": "Another ToDo app developed with vanilla JS for the front-end and node for the back-end. The objective of this app is to practice my javascript skills.",
+  "description": "Another ToDo app developed with angular for the front-end and node for the back-end. The goal of this app is to practice my javascript skills.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -17,6 +17,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "multer": "^1.3.0",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "nodemon": "^1.18.1"
   }
 }
