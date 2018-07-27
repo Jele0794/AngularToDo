@@ -1,0 +1,30 @@
+mat-card {
+    margin: 20px auto;
+    width: 70%;
+    min-height: 25em;
+    text-align: center;
+}
+
+mat-card-content mat-form-field {
+    width: 400px;
+    margin: auto 10px auto auto;
+}
+
+mat-card-content mat-list-option {
+    text-align: left;
+}
+
+/* line through the completed task */
+::ng-deep mat-pseudo-checkbox.mat-pseudo-checkbox-checked + div.mat-list-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+::ng-deep mat-list-option div.mat-list-item-content div.mat-list-text {
+    display: inline !important;
+}
+
+mat-selection-list button.mat-raised-button {
+    width: 50px;
+    margin-left: 20px;
+}

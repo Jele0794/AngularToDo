@@ -1,3 +1,31 @@
-<p>
-  todo works!
-</p>
+<mat-card>
+    <mat-card-content>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Write a new task and get things done!" [formControl]="newTaskControl" tabindex="1"/>
+            </mat-form-field>
+            <button mat-raised-button color="primary" 
+            [disabled]="newTaskControl.hasError('required')"
+            (click)="createNewTask()">Add</button>
+            <!-- <mat-form-field>
+                <mat-select placeholder="Filter by due dates">
+                    <mat-option>All tasks</mat-option>
+                    <mat-option *ngFor="let dueDate of dueDates" [value]="dueDate">{{dueDate}}</mat-option>
+                </mat-select>
+            </mat-form-field> -->
+        </div>
+        <div class="tasks">
+            <!-- <mat-selection-list #tasksOptions (selectionChange)="editTask($event)"> -->
+            <mat-selection-list #tasksOptions>
+                <mat-list-option *ngFor="let task of tasks" [checkboxPosition]="after" [selected]="task.isCompleted">{{task.description}}</mat-list-option>
+            </mat-selection-list>
+        </div>
+        <div class="completed-tasks" [hidden]="completedTasks.length < 1">
+            <h3>Completed</h3>
+            <hr>
+            <mat-selection-list #completedTasksOptions>
+                <mat-list-option *ngFor="let task of completedTasks" [checkboxPosition]="after" [selected]="task.isCompleted">{{task.description}}</mat-list-option>
+            </mat-selection-list>
+        </div>
+    </mat-card-content>
+</mat-card>

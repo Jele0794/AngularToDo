@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
@@ -10,9 +11,14 @@ import {
   MatListModule,
   MatIconModule,
   MatInputModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatCardModule,
+  MatSelectModule
 } from '@angular/material';
 import { TodoComponent } from './todo/todo.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { APP_PROVIDERS } from './app.providers';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -21,7 +27,10 @@ export const MATERIAL_COMPONENTS = [
   MatListModule,
   MatIconModule,
   MatInputModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatCardModule,
+  MatSelectModule,
+  MatIconModule
 ]
 
 @NgModule({
@@ -33,12 +42,17 @@ export const MATERIAL_COMPONENTS = [
     BrowserModule,
     RouterModule,
     MATERIAL_COMPONENTS,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
-    MATERIAL_COMPONENTS
+    MATERIAL_COMPONENTS,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [APP_PROVIDERS],
   bootstrap: [AppComponent]
 
   
